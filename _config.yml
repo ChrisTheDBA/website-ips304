@@ -1,0 +1,74 @@
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Contemporary Media Literacy and Open Data
+description: > # this means to ignore newlines until "timezone:"
+  Our 
+timezone: America/New York
+excerpt_separator: "<!-- excerpt -->"
+
+# Social Media
+email: cdmathew@uncg.edu
+twitter_username: christhedba
+instagram_username: christhedba
+github_username: christhedba
+facebook_username: christhedba
+twitch_username: christhedba
+active_slack: christhedba
+alumni_slack: christhedba
+linkedin_id: 6976074
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jemoji
+
+paginate: 5
+paginate_path: "/blog/page:num"
+
+collections:
+  events:
+    output: true
+    permalink: /:title
+  spotlights:
+    output: false
+  tags:
+    output: true
+    permalink: /blog/tags/:title
+
+defaults:
+  - scope:
+      type: "events"
+    values:
+      layout: "event"
+  - scope:
+      type: "posts"
+    values:
+      permalink: /blog/:year/:month/:day/:title
+  - scope:
+      type: "spotlights"
+    values:
+      cover-image: http://placehold.it/750x450
+      position: "Member"
+  - scope:
+      type: "tags"
+    values:
+      layout: "tag"
+
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - docker-compose.yml
+  - README.md
+  - .travis.yml
+  - .gitignore
+  - LICENSE

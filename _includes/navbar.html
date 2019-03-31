@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="{% link index.md %}">
+      <img src="{{ '/assets/img/arctic_delta_t.png' | relative_link }}" class="d-inline-block" alt="">
+      Contemporary Media Literacy and Open Data
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+        <!-- <li class="nav-item active"> -->
+        <li class="nav-item">
+          <a class="nav-link" href="{% link index.md %}">Home<!-- <span class="sr-only">(current)</span>--></a>
+        </li>
+        <!--
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="{% link active.md %}" id="involved" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Get Involved</a>
+          <div class="dropdown-menu" aria-labelledby="involved">
+            <a class="dropdown-item" href="{% link active.md %}">Join</a>
+            <a class="dropdown-item" href="{% link alumni.md %}">Reconnect</a>
+          </div>
+        </li>
+      -->
+      <!--
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="events" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Events</a>
+          <div class="dropdown-menu" aria-labelledby="events">
+            {% for event in site.events %}
+            <a class="dropdown-item" href="{{ event.url }}">{{event.title}}</a>
+            {% endfor %}
+          </div>
+        </li>
+      -->  
+        {% if site.posts.size > 0 %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% link blog/index.html %}">Blog</a>
+        </li>
+        {% endif %}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="{% link history.md %}" id="about" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="dropdown-menu" aria-labelledby="about">
+            <a class="dropdown-item" href="{% link website.md %}">The Website</a>
+            <a class="dropdown-item" href="{% link operations.md %}">Chris</a>
+            <a class="dropdown-item" href="{% link contact.md %}">The Class</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
