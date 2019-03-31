@@ -1,3 +1,7 @@
+# A Website for partial completion of IPS 304 UNCG BIPS Progam
+
+based on the following
+
 # Triangle Fraternity at Michigan Technological University
 
 [![Build Status](https://travis-ci.org/trianglefraternitymtu/trianglefraternitymtu.github.io.svg?branch=master)](https://travis-ci.org/trianglefraternitymtu/trianglefraternitymtu.github.io)
